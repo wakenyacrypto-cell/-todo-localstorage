@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Multi‑Timezone Digital Clock</title>
+  <link rel="stylesheet" href="clock.css">
+</head>
+<body>
+  <main class="clock-app">
+    <h1>Multi‑Timezone Digital Clock</h1>
+
+    <section class="controls">
+      <label>
+        Add time zone (IANA):
+        <input id="tz-input" placeholder="e.g. America/New_York" aria-label="Add time zone" />
+      </label>
+      <button id="add-tz">Add</button>
+      <div class="options">
+        <label><input type="checkbox" id="show-seconds" /> Show seconds</label>
+        <label><input type="checkbox" id="hour-12" /> 12-hour</label>
+      </div>
+    </section>
+
+    <ul id="zones" class="zones" aria-live="polite"></ul>
+
+    <footer class="footer">
+      <button id="reset-defaults">Reset to defaults</button>
+      <span class="muted">Times are formatted using Intl.DateTimeFormat (handles DST)</span>
+    </footer>
+  </main>
+
+  <script src="clock.js"></script>
+</body>
+</html>
